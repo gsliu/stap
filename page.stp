@@ -1,0 +1,11 @@
+probe kernel.function("__do_page_fault").call
+{
+        if ( execname() == "page"){
+            printf("%s \n",probefunc())
+         printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+	printf(" addr is %d \n",$address);
+         print_backtrace()
+                 printf("----------------------------------------------\n\n\n")
+        }
+}
+

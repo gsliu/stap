@@ -1,0 +1,9 @@
+probe kernel.function("alloc_pages")
+{
+	if (execname() == "stack")
+	{
+		printf("execname is %s, pid is %d\n", execname(), pid());
+		print_backtrace();
+		printf("**********************\n\n\n");
+	}
+}

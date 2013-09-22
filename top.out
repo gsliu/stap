@@ -1,0 +1,153 @@
+top - 16:13:47 up 4 days,  6:06,  4 users,  load average: 4.21, 3.21, 1.36
+Tasks: 145 total,   4 running, 141 sleeping,   0 stopped,   0 zombie
+Cpu(s):  0.5%us,  0.3%sy,  0.0%ni, 98.5%id,  0.5%wa,  0.0%hi,  0.0%si,  0.2%st
+Mem:   3923096k total,  3805048k used,   118048k free,   189976k buffers
+Swap:  2064376k total,    25544k used,  2038832k free,   612144k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                    
+25449 root      20   0 1027m 969m  296 R 18.5 25.3   0:50.45 page                                                                                                                       
+ 2222 ovirt     20   0 2226m 610m  18m S 17.3 15.9  75:43.22 java                                                                                                                       
+25589 root      20   0 1027m 4160  296 R 17.3  0.1   0:01.61 page                                                                                                                       
+25556 root      20   0 1027m  60m  296 R 13.6  1.6   0:11.46 page                                                                                                                       
+25596 root      20   0 15028 1100  808 R  1.2  0.0   0:00.13 top                                                                                                                        
+    1 root      20   0 19352 1496 1188 S  0.0  0.0   0:00.57 init                                                                                                                       
+    2 root      20   0     0    0    0 S  0.0  0.0   0:00.05 kthreadd                                                                                                                   
+    3 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0                                                                                                                
+    4 root      20   0     0    0    0 S  0.0  0.0   0:05.84 ksoftirqd/0                                                                                                                
+    5 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0                                                                                                                
+    6 root      RT   0     0    0    0 S  0.0  0.0   0:11.91 watchdog/0                                                                                                                 
+    7 root      20   0     0    0    0 S  0.0  0.0   0:38.64 events/0                                                                                                                   
+    8 root      20   0     0    0    0 S  0.0  0.0   0:00.00 cgroup                                                                                                                     
+    9 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khelper                                                                                                                    
+   10 root      20   0     0    0    0 S  0.0  0.0   0:00.00 netns                                                                                                                      
+   11 root      20   0     0    0    0 S  0.0  0.0   0:00.00 async/mgr                                                                                                                  
+   12 root      20   0     0    0    0 S  0.0  0.0   0:00.00 pm                                                                                                                         
+   13 root      20   0     0    0    0 S  0.0  0.0   0:02.32 sync_supers                                                                                                                
+   14 root      20   0     0    0    0 S  0.0  0.0   0:02.08 bdi-default                                                                                                                
+   15 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kintegrityd/0                                                                                                              
+   16 root      20   0     0    0    0 S  0.0  0.0   0:12.03 kblockd/0                                                                                                                  
+   17 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kacpid                                                                                                                     
+   18 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kacpi_notify                                                                                                               
+   19 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kacpi_hotplug                                                                                                              
+   20 root      20   0     0    0    0 S  0.0  0.0   0:00.01 ata/0                                                                                                                      
+   21 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ata_aux                                                                                                                    
+   22 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ksuspend_usbd                                                                                                              
+   23 root      20   0     0    0    0 S  0.0  0.0   0:00.03 khubd                                                                                                                      
+   24 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kseriod                                                                                                                    
+   25 root      20   0     0    0    0 S  0.0  0.0   0:00.00 md/0                                                                                                                       
+   26 root      20   0     0    0    0 S  0.0  0.0   0:00.00 md_misc/0                                                                                                                  
+   27 root      20   0     0    0    0 S  0.0  0.0   0:00.50 khungtaskd                                                                                                                 
+   28 root      20   0     0    0    0 S  0.0  0.0   0:13.56 kswapd0                                                                                                                    
+   29 root      25   5     0    0    0 S  0.0  0.0   0:00.00 ksmd                                                                                                                       
+   30 root      39  19     0    0    0 S  0.0  0.0   0:01.88 khugepaged                                                                                                                 
+   31 root      20   0     0    0    0 S  0.0  0.0   0:00.00 aio/0                                                                                                                      
+   32 root      20   0     0    0    0 S  0.0  0.0   0:00.00 crypto/0                                                                                                                   
+   37 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kthrotld/0                                                                                                                 
+   39 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kpsmoused                                                                                                                  
+   40 root      20   0     0    0    0 S  0.0  0.0   0:00.00 usbhid_resumer                                                                                                             
+   71 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kstriped                                                                                                                   
+  282 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_0                                                                                                                  
+  284 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1                                                                                                                  
+  314 root      20   0     0    0    0 S  0.0  0.0   0:00.00 virtio-blk                                                                                                                 
+  434 root      20   0     0    0    0 S  0.0  0.0   0:04.53 kdmflush                                                                                                                   
+  436 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kdmflush                                                                                                                   
+  455 root      20   0     0    0    0 S  0.0  0.0   0:08.83 flush-253:0                                                                                                                
+  456 root      20   0     0    0    0 S  0.0  0.0   1:42.29 jbd2/dm-0-8                                                                                                                
+  457 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit                                                                                                            
+  539 root      16  -4 10776  844  300 S  0.0  0.0   0:00.14 udevd                                                                                                                      
+  727 root      20   0     0    0    0 S  0.0  0.0   0:00.00 virtio-net                                                                                                                 
+  752 root      20   0     0    0    0 S  0.0  0.0   0:00.00 hd-audio0                                                                                                                  
+  764 root      20   0     0    0    0 S  0.0  0.0   0:00.00 vballoon                                                                                                                   
+ 1002 root      20   0     0    0    0 S  0.0  0.0   0:00.00 jbd2/vda1-8                                                                                                                
+ 1003 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ext4-dio-unwrit                                                                                                            
+ 1112 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kauditd                                                                                                                    
+ 1658 rpc       20   0 18972  972  692 S  0.0  0.0   0:01.22 rpcbind                                                                                                                    
+ 1757 root      20   0 13548  664  516 S  0.0  0.0   0:44.46 lldpad                                                                                                                     
+ 1766 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_tgtd/0                                                                                                                
+ 1767 root      20   0     0    0    0 S  0.0  0.0   0:00.00 fc_exch_workque                                                                                                            
+ 1768 root      20   0     0    0    0 S  0.0  0.0   0:00.00 fc_rport_eq                                                                                                                
+ 1770 root      20   0     0    0    0 S  0.0  0.0   0:00.00 fcoe_work/0                                                                                                                
+ 1771 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 fcoethread/0                                                                                                               
+ 1772 root      20   0     0    0    0 S  0.0  0.0   0:00.00 cnic_wq                                                                                                                    
+ 1773 root      20   0     0    0    0 S  0.0  0.0   0:00.00 bnx2fc                                                                                                                     
+ 1774 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bnx2fc_l2_threa                                                                                                            
+ 1775 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 bnx2fc_thread/0                                                                                                            
+ 1778 root      20   0  8352  612  504 S  0.0  0.0   0:03.71 fcoemon                                                                                                                    
+ 1790 dbus      20   0 21664 1284  716 S  0.0  0.0   0:00.19 dbus-daemon                                                                                                                
+ 1800 root      20   0 87800 5580 4268 S  0.0  0.1   0:04.97 NetworkManager                                                                                                             
+ 1806 root      20   0 55828 2292 1840 S  0.0  0.1   0:00.07 modem-manager                                                                                                              
+ 1812 avahi     20   0 27800 1672 1312 S  0.0  0.0   0:03.56 avahi-daemon                                                                                                               
+ 1813 avahi     20   0 27668  376  196 S  0.0  0.0   0:00.00 avahi-daemon                                                                                                               
+ 1831 root      20   0     0    0    0 S  0.0  0.0   0:00.00 rpciod/0                                                                                                                   
+ 1837 rpcuser   20   0 23344 1352  900 S  0.0  0.0   0:00.03 rpc.statd                                                                                                                  
+ 1919 root      20   0 44628  660  400 S  0.0  0.0   0:00.00 wpa_supplicant                                                                                                             
+ 1920 root      20   0  184m 3296 2416 S  0.0  0.1   0:00.01 cupsd                                                                                                                      
+ 1975 root      20   0  4076  636  528 S  0.0  0.0   0:00.00 acpid                                                                                                                      
+ 1984 haldaemo  20   0 25172 3948 3120 S  0.0  0.1   0:03.69 hald                                                                                                                       
+ 1985 root      20   0 18104 1144  940 S  0.0  0.0   0:00.00 hald-runner                                                                                                                
+ 2023 root      20   0 20220 1068  916 S  0.0  0.0   0:00.01 hald-addon-inpu                                                                                                            
+ 2028 haldaemo  20   0 17804 1016  868 S  0.0  0.0   0:00.00 hald-addon-acpi                                                                                                            
+ 2048 root      20   0  376m 1752 1272 S  0.0  0.0   0:06.98 automount                                                                                                                  
+ 2164 root      20   0  6764  516  360 S  0.0  0.0   0:00.00 mcelog                                                                                                                     
+ 2176 root      20   0 64116 1180  512 S  0.0  0.0   0:00.08 sshd                                                                                                                       
+ 2207 postgres  20   0  210m 5688 4968 S  0.0  0.1   0:09.62 postmaster                                                                                                                 
+ 2216 postgres  20   0  172m 1100  384 S  0.0  0.0   0:13.57 postmaster                                                                                                                 
+ 2218 postgres  20   0  210m 3712 2956 S  0.0  0.1   2:08.91 postmaster                                                                                                                 
+ 2219 postgres  20   0  210m 1344  624 S  0.0  0.0   1:34.63 postmaster                                                                                                                 
+ 2220 postgres  20   0  210m 1464  612 S  0.0  0.0   0:19.09 postmaster                                                                                                                 
+ 2221 postgres  20   0  172m 1204  416 S  0.0  0.0   0:18.09 postmaster                                                                                                                 
+ 2299 root      20   0 78728 3252 2396 S  0.0  0.1   0:02.79 master                                                                                                                     
+ 2308 postfix   20   0 78976 3264 2436 S  0.0  0.1   0:00.59 qmgr                                                                                                                       
+ 2325 root      20   0  107m  892  756 S  0.0  0.0   0:00.00 abrtd                                                                                                                      
+ 2333 root      20   0  105m  828  700 S  0.0  0.0   0:00.89 abrt-dump-oops                                                                                                             
+ 2348 root      20   0  188m 5444 2908 S  0.0  0.1   0:15.69 httpd                                                                                                                      
+ 2356 root      20   0  114m 1252  652 S  0.0  0.0   0:03.00 crond                                                                                                                      
+ 2367 root      20   0 21452  480  300 S  0.0  0.0   0:00.22 atd                                                                                                                        
+ 2379 root      20   0 98.6m  624  492 S  0.0  0.0   0:00.22 rhnsd                                                                                                                      
+ 2385 root      20   0  101m  572  472 S  0.0  0.0   0:00.15 rhsmcertd                                                                                                                  
+ 2400 root      20   0 61888  576  232 S  0.0  0.0   0:02.23 certmonger                                                                                                                 
+ 2418 root      20   0 77104 2676 2120 S  0.0  0.1   0:00.03 login                                                                                                                      
+ 2420 root      20   0  4060  524  456 S  0.0  0.0   0:00.00 mingetty                                                                                                                   
+ 2422 root      20   0  4060  524  456 S  0.0  0.0   0:00.00 mingetty                                                                                                                   
+ 2424 root      20   0  4060  528  456 S  0.0  0.0   0:00.00 mingetty                                                                                                                   
+ 2426 root      18  -2 10772  864  320 S  0.0  0.0   0:00.13 udevd                                                                                                                      
+ 2427 root      18  -2 10772  852  312 S  0.0  0.0   0:00.00 udevd                                                                                                                      
+ 2428 root      20   0  4060  524  456 S  0.0  0.0   0:00.00 mingetty                                                                                                                   
+ 2430 root      20   0  4060  528  456 S  0.0  0.0   0:00.00 mingetty                                                                                                                   
+ 2431 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 2432 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 2433 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 2434 apache    20   0  188m 3208  644 S  0.0  0.1   0:01.10 httpd                                                                                                                      
+ 2435 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 2436 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 2437 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 2438 apache    20   0  188m 3204  640 S  0.0  0.1   0:00.00 httpd                                                                                                                      
+ 3569 root      20   0  561m 3076 1904 S  0.0  0.1   0:00.34 console-kit-dae                                                                                                            
+ 3636 root      20   0  105m 1840 1400 S  0.0  0.0   0:00.01 bash                                                                                                                       
+ 3659 root      20   0 97900 4000 3048 S  0.0  0.1   0:02.22 sshd                                                                                                                       
+ 3663 root      20   0  105m 1964 1448 S  0.0  0.1   0:01.92 bash                                                                                                                       
+ 8537 root      20   0  102m  272  136 S  0.0  0.0   0:00.00 rpc.rquotad                                                                                                                
+ 8541 root      20   0 21656 1540  896 S  0.0  0.0   0:00.05 rpc.mountd                                                                                                                 
+ 8592 root      20   0 25160  740  524 S  0.0  0.0   0:00.00 rpc.idmapd                                                                                                                 
+ 8596 root      20   0     0    0    0 S  0.0  0.0   0:00.00 lockd                                                                                                                      
+ 8597 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd4                                                                                                                      
+ 8598 root      20   0     0    0    0 S  0.0  0.0   0:00.00 nfsd4_callbacks                                                                                                            
+ 8599 root      20   0     0    0    0 S  0.0  0.0   0:00.09 nfsd                                                                                                                       
+ 8600 root      20   0     0    0    0 S  0.0  0.0   0:00.00 nfsd                                                                                                                       
+ 8601 root      20   0     0    0    0 S  0.0  0.0   0:00.00 nfsd                                                                                                                       
+ 8602 root      20   0     0    0    0 S  0.0  0.0   0:00.00 nfsd                                                                                                                       
+ 8603 root      20   0     0    0    0 S  0.0  0.0   0:00.00 nfsd                                                                                                                       
+ 8604 root      20   0     0    0    0 S  0.0  0.0   0:00.00 nfsd                                                                                                                       
+ 8605 root      20   0     0    0    0 S  0.0  0.0   0:00.04 nfsd                                                                                                                       
+ 8606 root      20   0     0    0    0 S  0.0  0.0   0:00.02 nfsd                                                                                                                       
+22220 postgres  20   0  217m  12m 6628 S  0.0  0.3   0:20.98 postmaster                                                                                                                 
+23192 root      20   0  243m 3520 1068 S  0.0  0.1   0:00.13 rsyslogd                                                                                                                   
+23251 postgres  20   0  217m  12m 6600 S  0.0  0.3   0:06.37 postmaster                                                                                                                 
+23338 root      20   0 98888 5080 3056 S  0.0  0.1   0:04.64 sshd                                                                                                                       
+23340 root      20   0  105m 1916 1444 S  0.0  0.0   0:01.05 bash                                                                                                                       
+23791 root      20   0 97900 4000 3048 S  0.0  0.1   0:00.73 sshd                                                                                                                       
+23794 root      20   0  105m 1900 1436 S  0.0  0.0   0:00.74 bash                                                                                                                       
+24279 postfix   20   0 78808 3220 2396 S  0.0  0.1   0:00.03 pickup                                                                                                                     
+24331 root      20   0  105m 1996  960 S  0.0  0.1   0:06.95 watch                                                                                                                      
+25431 root      20   0 1027m 1.0g  336 S  0.0 26.7   0:01.91 page                                                                                                                       
+

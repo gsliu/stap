@@ -1,0 +1,15 @@
+probe module("sunrpc").function("__rpc_execute").call
+{
+	if( execname()=="ls" )
+	{
+		printf("%s  |%s -> %s \n", execname(), thread_indent(1), probefunc())
+		printf("para: timeout= %d, run state= %d\n", $task->tk_timeout, $task->tk_runstate)
+	}
+}
+probe module("sunrpc").function("__rpc_execute").return
+{
+	if( execname()=="ls" )
+	{
+		printf("rpcexec returned\n")
+	}	
+}

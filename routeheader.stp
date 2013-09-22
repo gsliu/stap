@@ -1,0 +1,96 @@
+probe module("ipv6").function("ip6_pol_route")
+{
+	if ((execname()!="postmaster")&& ($net->ipv6->devconf_all->forwarding==0))
+	{
+       		 printf("%s \n",probefunc())
+
+        	printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+		printf("forwarding = %d\n",  $net->ipv6->devconf_all->forwarding);
+//        printf("return value is %d\n", $return)
+        	print_backtrace()
+        	printf("----------------------------------------------\n\n\n")
+	}
+}
+
+probe module("ipv6").function("ip6_link_failure")
+{
+//	if ((execname()!="postmaster")&& ($net->ipv6->devconf_all->forwarding==0))
+	{
+       		 printf("%s \n",probefunc())
+
+        	printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+//		printf("forwarding = %d\n",  $net->ipv6->devconf_all->forwarding);
+        	print_backtrace()
+        	printf("----------------------------------------------\n\n\n")
+	}
+}
+/*
+probe module("ipv6").function("ipv6_chk_same_addr")
+{
+        printf("%s \n",probefunc())
+        printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        print_backtrace()
+        printf("----------------------------------------------\n\n\n")
+}
+probe module("ipv6").function("addrconf_dst_alloc").return
+{
+
+        printf("%s \n",probefunc())
+        printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        printf("return value is %d\n", $return)
+        print_backtrace()
+        printf("----------------------------------------------\n\n\n")
+}
+probe module("ipv6").function("ipv6_addr_hash")
+{
+
+        printf("%s \n",probefunc())
+        printf("has is called  ip \n")
+        printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        print_backtrace()
+        printf("----------------------------------------------\n\n\n")
+}
+probe module("ipv6").function("ipv6_addr_copy")
+{
+
+        printf("%s \n",probefunc())
+        printf("has is called  ip \n")
+        printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        print_backtrace()
+        printf("----------------------------------------------\n\n\n")
+}
+*/
+probe kernel.function("tcp_transmit_skb").return
+{
+	if ( execname() == "httpd"){
+	printf(" this is httpd output\n\n");
+    	    printf("%s \n",probefunc())
+       	 printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        printf("return value is %d\n", $return)
+       	 print_backtrace()
+       		 printf("----------------------------------------------\n\n\n")
+	}
+}
+/*
+
+probe module("ipv6").function("addrconf_dst_alloc").return
+{
+
+        printf("%s \n",probefunc())
+        printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        printf("return value is %d\n", $return)
+        print_backtrace()
+        printf("----------------------------------------------\n\n\n")
+}
+probe module("ipv6").function("ip6_dst_gc").return
+{
+
+	if ( execname() == "ip"){
+        printf("%s \n",probefunc())
+        printf("execname is : %s, pid is %d, tid is %d\n",execname(),pid(), tid())
+        printf("return value is %d\n", $return)
+        print_backtrace()
+        printf("----------------------------------------------\n\n\n")
+}
+}
+*/

@@ -1,0 +1,8 @@
+probe kernel.function("futex_wait_queue_me").call
+{
+	if( execname() == "nlock")
+	{
+		printf(" %s  pid is %d \n", execname(), pid())
+		print_backtrace()
+	}
+}

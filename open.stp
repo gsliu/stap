@@ -1,0 +1,4 @@
+probe syscall.open
+{
+  printf ("%s(%d) open  tid is %d \n", execname(), pid(),tid())
+}

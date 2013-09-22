@@ -1,0 +1,7 @@
+probe kernel.function("icmp_reply@net/ipv4/icmp.c")
+{
+	printf("%s -> %s \n", thread_indent(1), probefunc())
+	print_regs()
+  	print_backtrace()
+	printf("--------------------------------------------------\n")
+}

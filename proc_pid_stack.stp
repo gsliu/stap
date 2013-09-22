@@ -1,0 +1,24 @@
+/*
+probe kernel.function("proc_pid_stack").call
+{
+	printf(" execname =%s, pid is %d \n" , execname(),pid());
+	print_backtrace();
+}
+*/
+probe kernel.function("*@fs/proc/base.c").call
+{
+	if(execname()=="cat")
+	{
+ 		printf("%s -> %s \n",thread_indent(1), probefunc())
+
+	}
+}
+
+probe kernel.function("*@fs/proc/base.c").return 
+{
+	if(execname()=="cat")
+	{
+ 		printf("%s -> %s \n",thread_indent(-1), probefunc())
+
+	}
+}

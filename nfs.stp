@@ -1,0 +1,15 @@
+probe kernel.function("__wait_on_bit@kernel/wait.c").call {
+	if( execname()=="ls")
+	{
+		printf("%s  |%s -> %s \n", execname(), thread_indent(1), probefunc())
+		printf("bit =  %d,  flag = %d \n" , $q->key->bit_nr, $q->key->flags)
+	}
+}
+
+probe kernel.function("__wait_on_bit@kernel/wait.c").return {
+	if( execname()=="ls")
+	{
+		printf("%s  |%s -> %s\n", execname(), thread_indent(1), probefunc())
+	}
+}
+

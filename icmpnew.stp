@@ -1,0 +1,8 @@
+probe kernel.function("*@net/ipv4/icmp.c").call {
+	printf("%s -> %s\n", thread_indent(1), probefunc())
+}
+
+probe kernel.function("*@net/ipv4/icmp.c").return {
+	printf("%s <- %s\n", thread_indent(-1), probefunc())
+}
+

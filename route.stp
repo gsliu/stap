@@ -1,0 +1,7 @@
+probe kernel.function("ip_route_output_slow@net/ipv4/route.c")
+{
+	printf("%s -> %s \n", thread_indent(1), probefunc())
+	print_regs()
+  	print_backtrace()
+	printf("--------------------------------------------------\n")
+}

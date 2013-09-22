@@ -1,0 +1,7 @@
+probe module("nfs").function("nfs_file_open")
+{
+	printf("%s -> %s \n", thread_indent(1), probefunc())
+	print_regs()
+  	print_backtrace()
+	printf("--------------------------------------------------\n")
+}

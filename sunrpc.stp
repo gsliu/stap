@@ -1,0 +1,19 @@
+global count = 0
+probe module("sunrpc").function("rpc_wait_bit_killable").call
+{
+	count ++
+	printf("count is %d\n",count)
+	printf("time is %d\n",gettimeofday_ms())
+	printf("%s started   pid is %d, tid is %d\n",execname(),pid(),tid())
+	print_backtrace();
+	printf("waiting for return \n")
+	printf("*************************************\n")
+}
+probe module("sunrpc").function("rpc_wait_bit_killable").return
+{
+	printf("time is %d\n",gettimeofday_ms())
+	printf("%s returned  pid is %d, tid is %d ret is %d\n",execname(),pid(),tid(),$return)
+	printf("-------------------------------------------------------")
+	printf("\n")
+	printf("\n")
+}

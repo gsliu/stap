@@ -1,0 +1,12 @@
+global count=0;
+probe kernel.function("account_system_time").call
+{
+	if( pid() == 1)
+	{
+		count++;
+		printf("init stime ++ for %d times\n", count);
+		print_backtrace();
+		print_ubacktrace();
+		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+	}	
+}

@@ -1,0 +1,7 @@
+probe kernel.function("cookie_v4_init_sequence").return
+{
+	printf("execname is %s, pid is %d\n", execname(), pid());
+	printf("cookie_v4_init_sequence returns = %d\n\n", $return);
+	print_backtrace();
+	printf("*********************************************\n\n\n");
+}

@@ -1,0 +1,18 @@
+probe kernel.function("locks_remove_flock").call
+{
+	if( execname()=="flock")
+	{
+		
+		printf("execname is : %s, pid is %d, tid is %d", execname(), pid(), tid());
+		printf("\n\n");
+
+		printf("filename is %s\n", kernel_string($filp->f_path->dentry->d_name->name));
+		printf("\n\n");
+		print_backtrace();
+		printf("\n\n");
+		printf("filename is %x\n", $filp);
+		print_regs();
+		printf("\n\n");
+		printf("\n\n");
+	}
+}

@@ -1,0 +1,8 @@
+probe kernel.function("do_generic_file_read")
+{
+	printf("exec is %s, pid is %d\n", execname(),pid());
+
+  	print_backtrace();
+	
+ 	printf("*************************************\n\n");
+}

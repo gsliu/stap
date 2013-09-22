@@ -1,0 +1,24 @@
+global item_inc
+global item_dec
+
+probe kernel.function("__ip_route_output_key")
+{
+	printf("itme = %d ", $item)
+	if ($item == 3 || $item == 4 || $item == 9) {
+		if ($delta > 0) {
+			item_inc[$item] <<< $delta
+		} else if ($delta < 0) {
+			item_dec[$item] <<< -$delta
+		}
+	}
+}
+
+probe end
+{
+	foreach (item in item_inc) {
+		printf("item=%d inc_sum=%d\n", item, @sum(item_inc[item]))
+	}
+	foreach (item in item_dec) {
+		printf("item=%d dec_sum=%d\n", item, @sum(item_dec[item]))
+	}
+}

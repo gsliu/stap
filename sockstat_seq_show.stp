@@ -1,0 +1,6 @@
+probe kernel.function("sockstat_seq_show")
+{
+	printf("execname is %s pid is %d", execname(),pid());
+	print_backtrace();
+	printf("*******************************************\n\n\n");
+}

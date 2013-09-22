@@ -1,0 +1,7 @@
+probe kernel.function("sysfs_read_file").call
+{
+        print_regs();
+        print_backtrace();
+	printf("show is : %x\n",(sysfs_buffer *)($file->private_data)->ops->show);
+}
+

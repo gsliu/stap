@@ -1,0 +1,6 @@
+probe kernel.function("sync_page").call
+{
+	printf("sync_page is called by %s \n", execname());
+	print_backtrace();
+	printf("#############################################\n");
+}

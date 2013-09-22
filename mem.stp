@@ -1,0 +1,37 @@
+global item_inc
+global item_dec
+
+probe kernel.function("__mod_zone_page_state")
+{
+	if ($item == 3 || $item == 4 || $item == 9) {
+		if ($delta > 0) {
+			item_inc[$item] <<< $delta
+		} else if ($delta < 0) {
+			item_dec[$item] <<< -$delta
+		}
+	}
+}
+
+probe kernel.function("__inc_zone_page_state")
+{
+	if ($item == 3 || $item == 4 || $item == 9) {
+		item_inc[$item] <<< 1
+	}
+}
+
+probe kernel.function("__dec_zone_page_state")
+{
+	if ($item == 3 || $item == 4 || $item == 9) {
+		item_dec[$item] <<< 1
+	}
+}
+
+probe end
+{
+	foreach (item in item_inc) {
+		printf("item=%d inc_sum=%d\n", item, @sum(item_inc[item]))
+	}
+	foreach (item in item_dec) {
+		printf("item=%d dec_sum=%d\n", item, @sum(item_dec[item]))
+	}
+}

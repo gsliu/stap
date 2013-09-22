@@ -1,0 +1,10 @@
+probe syscall.delete_module
+{
+	 printf("process %s pid %d tid %d  %s \n", execname(),pid(),tid(), probefunc())
+	print_backtrace()
+}
+probe syscall.init_module
+{
+	 printf("process %s pid %d tid %d %s \n", execname(),pid(),tid(),probefunc())
+	print_backtrace()
+}

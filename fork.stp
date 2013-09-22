@@ -1,0 +1,14 @@
+probe kernel.function("*") 
+{
+	if(pid()==2149)
+	{
+  		printf ("%s -> %s\n", thread_indent(1), probefunc())
+	}
+}
+probe kernel.function("*").return 
+{
+	if(pid()==2149)
+	{
+  		printf ("%s <- %s\n", thread_indent(-1), probefunc())
+	}
+}

@@ -1,0 +1,14 @@
+/*probe module("dm_multipath").function("dm_register_path_selector").call
+{
+	printf("path selecter\n");
+	print_backtrace();
+
+}
+*/
+
+//probe module("dm_multipath").function("parse_path_selector").call
+probe module("dm_multipath").function("*").call
+{
+	printf("parse_path_selector\n");
+	print_backtrace();
+}

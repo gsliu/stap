@@ -1,0 +1,11 @@
+probe nfs.proc.open {
+printf("Opening file %s from server %x\n", filename, server_ip)
+}
+probe nfs.proc.write {
+printf("Writing to file %s on server %x\n", filename, server_ip)
+}
+probe nfs.proc.write_done {
+printf("Writing reply received from server %x. %d bytes wrote\n",
+server_ip, count)
+}
+

@@ -1,0 +1,9 @@
+global count1;
+probe kernel.function("tcp_prune_queue")
+{
+	count1++
+	printf("tcp_prune_queue is called for %d times \n", count1);
+	printf("exec = %s, pid= %d", execname(),pid())
+	print_backtrace();
+	printf("\n\n\n");
+}

@@ -1,0 +1,4 @@
+probe kernel.function("@net/sunrpc/sched.c").call
+{
+	 printf("%s  |%s -> %s\n", execname(), thread_indent(1), probefunc())
+}
